@@ -1,0 +1,44 @@
+.services {
+	text-align: center;
+	background: $gray-lighter;
+}
+
+.service-item {
+	margin: 30px auto;
+}
+
+.service-picto {
+	font-size: 55px;
+	display: block;
+	margin: 15px auto;
+	color: $theme-color;
+}
+
+.service-title {
+	margin: 15px 0;
+}
+
+
+/* Only XSmall devices (phones) */
+@media (max-width: $screen-xs-max) { 
+
+	.service-item {
+		max-width: 550px;
+	}
+
+}
+
+/* Small devices (tablets, 768px and up) */
+@media (min-width: $screen-sm-min) { 
+	
+}
+
+/* Medium devices (desktops, 992px and up) */
+@media (min-width: $screen-md-min) {
+
+}
+
+/* Large devices (large desktops, 1200px and up) */
+@media (min-width: $screen-lg-min) {
+
+}

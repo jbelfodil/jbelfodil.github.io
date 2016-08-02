@@ -1,0 +1,26 @@
+%reset-form-item {
+	@include appearance;
+	outline:none;
+	background-color: transparent;
+	border: 0 none;
+	padding: 0;
+}
+
+%bold-title {
+	display: block;
+	font-family: $raleway;
+	font-weight: $font-weight-bold;
+	text-transform: uppercase;
+}
+
+%fixedBackground {
+	background-attachment: fixed;
+	background-position: center center;
+	background-repeat: no-repeat;
+	background-size: cover;
+
+	/* Only XSmall devices (phones) */
+	@media (max-width: $screen-xs-max) {
+		background-attachment: scroll;
+	}
+}

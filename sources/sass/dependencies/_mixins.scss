@@ -1,0 +1,71 @@
+@mixin text-size-adjust {
+	-webkit-text-size-adjust: none;
+	-moz-text-size-adjust: none;
+	-o-text-size-adjust: none;
+	-ms-text-size-adjust: none;
+	text-size-adjust: none;
+}
+
+@mixin appearance {
+	appearance: none;
+	-moz-appearance: none;
+	-webkit-appearance: none;
+}
+
+@mixin reset-grid-gutter {
+	margin-left: - ($grid-gutter-width / 2);
+	margin-right: - ($grid-gutter-width / 2);
+}
+
+@mixin hover {
+	&:hover, &:focus, &.hover-effect {
+		@content;
+	}
+}
+
+@mixin fontFace($font,$path){
+	@font-face {
+		font-family: $font;
+		src: url($path + '.eot');
+		src: url($path + '.eot?#iefix') format('embedded-opentype'),
+				url($path + '.woff') format('woff'),
+				url($path + '.ttf') format('truetype'),
+				url($path + '.svg#' + $font) format('svg');
+	}
+}
+
+@mixin invisibleFade($type:in) {
+	opacity: 0;
+	visibility: hidden;
+	@if $type == in {
+		transition: visibility 0s linear 0.2s, opacity 0.2s linear;
+
+	}
+	@else {
+		transition: visibility 0s linear 0.2s, opacity 0.2s linear;
+	}
+}
+
+@mixin visibleFade($type:in) {
+	visibility: visible;
+	opacity: 1;
+	@if $type == in {
+		transition-delay:0s;
+	}
+	@else {
+		transition: visibility 0s linear 0s, opacity 0.2s linear;
+	}
+}
+
+@mixin spinning {
+	animation: spinning 1s infinite linear;
+}
+
+@keyframes spinning {
+	0% {
+		transform: rotate(0deg);
+	}
+	100% {
+		transform: rotate(359deg);
+	}
+}

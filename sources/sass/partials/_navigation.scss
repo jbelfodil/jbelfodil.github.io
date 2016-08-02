@@ -1,0 +1,163 @@
+
+.top-bar {
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 20;
+	width: 100%;
+	color: #fff;
+
+	.logo-bar {
+		position: relative;
+		z-index: 10;
+		overflow: hidden;
+		padding: 0 ($grid-gutter-width / 2);
+		@include reset-grid-gutter;
+	}
+
+	.logo {
+		float: left;
+		font-size: 36px;
+		color: #fff;
+		margin: 10px 0;
+	}
+}
+
+.main-nav {
+
+	.nav-items {
+		list-style: none;
+		padding: 0;
+		margin: 0;
+
+		a {
+			display: block;
+			padding: ($grid-gutter-width / 2);
+			text-transform: uppercase;
+			color: #fff;
+			transition: color 0.3s ease, background-color 0.3s ease;
+
+			&:hover,
+			&.active {
+				color: $theme-color;
+			}
+
+			&.active {
+				background: #fff;
+			}
+		}
+	}
+}
+
+
+/* Only XSmall devices (phones) */
+@media (max-width: $screen-xs-max) { 
+
+	.top-bar {
+
+		.logo-bar {
+			background: #222;
+		}
+	}
+
+	.mobile-nav-button {
+		float: right;
+		@extend %reset-form-item;
+		font-size: 32px;
+		margin: 12px 0;
+		transition: transform 0.5s ease, color 0.5s ease;
+	}
+
+	.open-mobile-nav-button {
+		transform: rotateY(180deg);
+		color: $theme-color;
+	}
+
+	.main-nav {
+		position: absolute;
+		left: 0;
+		top: 100%;
+		z-index: 5;
+		background: #222;
+		width: 100%;
+		transition: transform 0.5s ease, visibility 0s ease 0.6s;
+		backface-visibility: hidden;
+		perspective: 1000;
+		transform: translate(0, -100%);
+		transform: translate3d(0,-100%,0);
+		visibility: hidden;
+
+		.nav-items {
+			border-top: 1px solid #000;
+
+			li {
+				border-top: 1px solid $gray-darker;
+				border-bottom: 1px solid #000;
+
+				&:last-child {
+					border-bottom: 0 none;	
+				}
+			}
+		}
+	}
+
+	.open-main-nav {
+		transform: translate(0, 0);
+		transform: translate3d(0,0,0);
+		visibility: visible;
+		transition-delay:0s;
+	}
+}
+
+/* Small devices (tablets, 768px and up) */
+@media (min-width: $screen-sm-min) { 
+
+	.top-bar {
+		padding: 15px 0;
+		transition: padding 0.5s ease, background-color 0.3s ease;
+
+		.logo-bar {
+			float: left;
+		}
+
+		&.colored-bar {
+			padding: 0;
+			background: #222;
+		}
+
+		.logo {
+			font-size: 55px;
+		}
+
+	}
+
+	.main-nav {
+		float: right;
+		width: 80%;
+		text-align: right;
+
+		.nav-items {
+			display: inline-block;
+			vertical-align: middle;
+
+			li {
+				float: left;
+			}
+
+			a {
+				padding: 28px ($grid-gutter-width / 2);
+			}
+		
+		}
+	}
+}
+
+/* Medium devices (desktops, 992px and up) */
+@media (min-width: $screen-md-min) {
+
+}
+
+/* Large devices (large desktops, 1200px and up) */
+@media (min-width: $screen-lg-min) {
+
+}

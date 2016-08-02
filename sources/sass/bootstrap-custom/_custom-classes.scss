@@ -1,0 +1,66 @@
+// BOOTSTRAP CUSTOMIZED
+
+// Button sizes
+
+.btn {
+	transition: background-color 0.3s ease, color 0.3s ease;
+	text-transform: uppercase;
+
+	&:hover,
+	&:active,
+	&:focus{
+		color: #fff;
+		background-color: $brand-primary;
+		border-color: $btn-default-border;
+		outline: 0!important;
+		box-shadow: none;
+	}
+}
+
+.btn-lg {
+	font-size: $font-size-base;
+}
+
+// Form input
+
+.form-group {
+	position: relative;
+	border-bottom: 1px solid $input-border;
+
+	i {
+		position: absolute;
+		font-size: 22px;
+		top: 11px;
+		left: 0;
+		z-index: 1;
+		color: $theme-color;
+	}
+
+	label {
+		display:none;
+		padding: 0 $padding-base-horizontal;
+	}
+
+	&.form-group-lg {
+
+		.form-control {
+			font-size: 20px;
+		}
+			label {
+			padding: 0 $padding-large-horizontal;
+		}
+	}
+
+	&.form-group-sm {
+
+      label {
+			padding: 0 $padding-small-horizontal;
+		}
+    }
+}
+
+.form-control  {
+	box-shadow: none!important;
+	border: 0 none!important;
+}
+

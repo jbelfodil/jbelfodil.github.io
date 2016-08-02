@@ -1,0 +1,71 @@
+
+.citation {
+	text-align: center;
+	padding: 120px 0;
+	color: #fff;
+	@extend %fixedBackground;
+
+	.btn-lg {
+		margin: 15px 0;
+		font-size: 16px;
+		color: #fff;
+		border-color: #fff;
+
+		&:hover,
+		&:active,
+		&:focus{
+			color: $btn-default-color;
+			background-color: #fff;
+			border-color: #fff;
+		}
+	}
+}
+
+.citation-sentence {
+	font-size: 26px;
+}
+
+/* Only XSmall devices (phones) */
+@media (max-width: $screen-xs-max) {
+
+	.citation {
+		background-position: 20% center;
+	}
+}
+
+/* Small devices (tablets, 768px and up) */
+@media (min-width: $screen-sm-min) {
+
+	.citation {
+		padding: 250px 0;
+
+		.btn-lg {
+			font-size: 18px;
+		}
+	}
+
+	.citation-sentence {
+		font-size: 32px;
+	}
+}
+
+/* Medium devices (desktops, 992px and up) */
+@media (min-width: $screen-md-min) {
+
+	.citation {
+		padding: 300px 0;
+	}
+
+	.citation-sentence {
+		font-size: 36px;
+	}
+}
+
+/* Large devices (large desktops, 1200px and up) */
+@media (min-width: $screen-lg-min) {
+
+	.citation {
+		padding: 350px 0;
+	}
+}
+

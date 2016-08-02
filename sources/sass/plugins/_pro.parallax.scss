@@ -1,0 +1,39 @@
+.parallax-container {
+	position: relative;
+	overflow: hidden;
+	z-index: 0;
+	background-color: red;
+}
+
+.parallax-item {
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 0;
+	background-position: center center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	height: 100%;
+	width: 100%;
+	backface-visibility: hidden;
+	perspective: 1000;
+}
+
+/* Only XSmall devices (phones) */
+@media (max-width: $screen-xs-max) {
+
+	.parallax-item {
+		position: fixed;
+		transform: translate(0, 0)!important;
+		transform: translate3d(0, 0, 0)!important;
+	}
+}
+
+/* Small devices (tablets, 768px and up) */
+@media (min-width: $screen-sm-min) {
+
+	.parallax-item {
+		transform: translate(0, 0);
+		transform: translate3d(0, 0, 0);
+	}
+}

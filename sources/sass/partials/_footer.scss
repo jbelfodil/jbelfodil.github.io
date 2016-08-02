@@ -1,0 +1,97 @@
+.footer {
+	text-align: center;
+	color: #fff;
+	@extend %fixedBackground;
+}
+
+.footer-inner {
+	position: relative;
+	padding: 70px 0;
+}
+
+.footer-details {
+	margin: 0 0 50px;
+	
+	a {
+		color: #fff;
+		transition: color 0.3s ease;
+
+		&:hover {
+			color: $theme-color;
+		}
+	}
+}
+
+.footer-details-title {
+	display: block;
+	@extend %bold-title;
+	font-size: 20px;
+	margin: 10px 0;
+
+	i {
+	  margin: 0 5px 0 0;
+	}
+}
+
+.footer-details-subtitle {
+	display: inline-block;
+	vertical-align: middle;
+	font-size: 18px;
+}
+
+.footer-social {
+	display: inline-block;
+	vertical-align: middle;
+	font-size: 40px;
+	margin: 0 20px;
+	color: #fff;
+	transition: color 0.3s ease;
+
+	&:hover {
+		color: $theme-color;
+	}
+}
+
+.footer-sub-details {
+	margin: 0 0 50px;
+}
+
+.copyright {
+	position: absolute;
+	bottom: 10px;
+	left: 0;
+	z-index: 1;
+	width: 100%;
+	text-align: center;
+	font-size: 12px;
+
+	i {
+		margin: 0 5px;
+	}
+}
+
+/* Only XSmall devices (phones) */
+@media (max-width: $screen-xs-max) { 
+
+		.footer {
+		}
+}
+
+/* Small devices (tablets, 768px and up) */
+@media (min-width: $screen-sm-min) { 
+
+	.footer-inner {
+		padding: 100px 0;
+	}
+
+}
+
+/* Medium devices (desktops, 992px and up) */
+@media (min-width: $screen-md-min) {
+
+}
+
+/* Large devices (large desktops, 1200px and up) */
+@media (min-width: $screen-lg-min) {
+
+}

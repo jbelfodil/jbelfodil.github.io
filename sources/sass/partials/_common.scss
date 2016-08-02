@@ -1,0 +1,59 @@
+body {
+	font-weight: $font-weight-base;
+	color: #333;
+}
+
+h1, h2, h3, h4 {
+	font-weight: inherit;
+}
+
+section{
+	position: relative;
+	padding: 100px 0;
+}
+
+p {
+	font-size: 18px;
+	line-height: 1.6;
+
+	strong {
+		font-weight: inherit;
+	}
+}
+
+a {
+	outline: 0!important;
+}
+
+.separation {
+	display: block;
+	width: 150px;
+	height: 4px;
+	border-top: 1px solid $theme-color;
+	border-bottom: 1px solid $theme-color;
+	margin: 15px auto; 
+
+	@media (min-width: $screen-sm-min) { 
+		width: 200px;
+		height: 6px;
+	}
+}
+
+.colored {
+	color: $theme-color;
+}
+
+.bold-subtitle {
+	@extend %bold-title;
+	font-size: 35px;
+	margin: 0 0 15px; 
+
+	@media (min-width: $screen-sm-min) { 
+		font-size: 50px;
+	}
+}
+
+.bold-item-title {
+	@extend %bold-title;
+	font-size: 25px;
+}

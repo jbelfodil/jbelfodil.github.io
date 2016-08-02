@@ -1,0 +1,23 @@
+/*
+Theme Name: pro
+Author: Jeremy Belfodil
+Version: 1.0.0
+*/
+
+
+@import 'dependencies';
+
+@import 'bootstrap-custom/bootstrap-custom';
+@import 'bootstrap-custom/custom-classes';
+
+@import 'partials/common';
+@import 'partials/navigation';
+@import 'partials/header';
+@import 'partials/about';
+@import 'partials/services';
+@import 'partials/citation';
+@import 'partials/competences';
+@import 'partials/portfolio';
+@import 'partials/contact';
+@import 'partials/footer';
+@import 'partials/404';

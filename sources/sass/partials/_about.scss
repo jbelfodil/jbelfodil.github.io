@@ -1,0 +1,31 @@
+.about {
+	text-align: center;
+}
+
+.about-picture {
+	width:80%;
+	max-width: 350px;
+	border-radius: 50%;
+	margin: 0 0 20px;
+} 
+
+
+/* Only XSmall devices (phones) */
+@media (max-width: $screen-xs-max) { 
+
+}
+
+/* Small devices (tablets, 768px and up) */
+@media (min-width: $screen-sm-min) { 
+	
+}
+
+/* Medium devices (desktops, 992px and up) */
+@media (min-width: $screen-md-min) {
+
+}
+
+/* Large devices (large desktops, 1200px and up) */
+@media (min-width: $screen-lg-min) {
+
+}

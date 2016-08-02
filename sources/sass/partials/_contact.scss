@@ -1,0 +1,109 @@
+.contact {
+	text-align: center;
+}
+
+.contact-form {
+	text-align: left;
+	margin: 30px 0;
+
+	.form-control {
+		padding: $padding-large-vertical 35px;
+	}
+
+	.contact-secure-wrapper {
+		border: 0 none;
+
+		label {
+			display: inline-block;
+			vertical-align: middle;
+			font-weight: $font-weight-base;
+			font-size: 18px;
+		}
+
+		.contact-secure {
+			display: inline-block;
+			vertical-align: middle;
+			border: 1px solid $input-border!important;
+			padding: $padding-large-vertical  $padding-large-horizontal;
+			width: 45px;
+			font-size: 18px;
+		}
+
+
+	}
+}
+
+.bottom-form {
+	position: relative;
+	margin: 30px 0 0;
+
+	.btn {
+		position: relative;
+  		z-index: 2;
+	}
+
+	.loader {
+		font-size: 30px;
+		position: absolute;
+		top: 5px;
+		left: 19px;
+		z-index: 1;
+		color: $theme-color;
+		@include invisibleFade;
+		@include spinning;
+	}
+
+	.response {
+		font-size: 18px;
+		margin: 0 0 0 15px;
+  		@include invisibleFade;
+	}
+
+	&.loading {
+		
+		.btn {
+	  		@include invisibleFade;
+		}
+
+		.loader {
+			@include visibleFade;
+		}
+	}
+
+	&.done {
+
+		.btn {
+			@include visibleFade;
+		}
+
+		.loader {
+			@include invisibleFade;
+		}
+
+		.response {
+	  		@include visibleFade;
+		}
+	}
+
+}
+
+
+/* Only XSmall devices (phones) */
+@media (max-width: $screen-xs-max) { 
+
+}
+
+/* Small devices (tablets, 768px and up) */
+@media (min-width: $screen-sm-min) { 
+	
+}
+
+/* Medium devices (desktops, 992px and up) */
+@media (min-width: $screen-md-min) {
+
+}
+
+/* Large devices (large desktops, 1200px and up) */
+@media (min-width: $screen-lg-min) {
+
+}

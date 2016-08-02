@@ -1,0 +1,63 @@
+.competences {
+	text-align: center;
+}
+
+.competence-item {
+	position: relative;
+	margin: 15px 0 45px;
+
+	svg {
+		width: 80%;
+		height: 100%;
+		padding: 5%;
+	}
+}
+
+.competence-picture {
+	width: 40%;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	z-index: 1;
+	transform: translate(-50%, -50%);
+}
+
+.competence-title {
+	display: none;
+}
+
+.competence-percent {
+	font-size: 20px;
+	position: absolute;
+	bottom: -26px;
+	left: 0;
+	z-index: 1;
+	margin: 0;
+	width: 100%;
+	text-align: center;
+	color: $theme-color;
+}
+
+/* Only XSmall devices (phones) */
+@media (max-width: $screen-xs-max) { 
+
+}
+
+/* Small devices (tablets, 768px and up) */
+@media (min-width: $screen-sm-min) {
+
+	.competence-percent {
+		font-size: 25px;
+	}
+
+}
+
+/* Medium devices (desktops, 992px and up) */
+@media (min-width: $screen-md-min) {
+
+}
+
+/* Large devices (large desktops, 1200px and up) */
+@media (min-width: $screen-lg-min) {
+
+}
